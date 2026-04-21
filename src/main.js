@@ -18,13 +18,13 @@ function applyTheme(theme) {
 function updateThemeButton(theme) {
   if (!btn || !btnLabel) return
 
-  const nextModeLabel = theme === "dark" ? "Modo Escuro" : "Modo Claro"
+  const nextModeLabel = theme === "dark" ? "" : ""
   btnLabel.textContent = nextModeLabel
   if (btnIcon) {
     btnIcon.src =
       theme === "dark"
-        ? `${BASE_URL}assets/icon/darkMode.png`
-        : `${BASE_URL}assets/icon/lightMode.png`
+        ? `${BASE_URL}assets/icon/lightMode.png`
+        : `${BASE_URL}assets/icon/darkMode.png`
   }
   btn.setAttribute("aria-label", `${nextModeLabel}`)
 }
