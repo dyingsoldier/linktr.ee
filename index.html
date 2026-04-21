@@ -8,6 +8,12 @@
     <link rel="icon" type="image/png" href="assets/icon/githubIcon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linktree</title>
+    <link rel="preload" as="image" href="assets/img/me.jpeg" />
+    <link rel="preload" as="image" href="assets/img/oliver.jpeg" />
+    <link rel="preload" as="image" href="assets/icon/lightMode.png" />
+    <link rel="preload" as="image" href="assets/icon/darkMode.png" />
+    <link rel="preload" as="image" href="assets/icon/spotifyBlack.png" />
+    <link rel="preload" as="image" href="assets/icon/spotifyWhite.png" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
@@ -23,21 +29,21 @@
           type="button"
           aria-live="polite"
         >
-            <img
-              id="themeToggleIcon"
-              class="w-4 object-contain"
-              src="assets/icon/lightMode.png"
-              alt=""
-              aria-hidden="true"
-            />
-          <span id="themeToggleLabel">Modo claro</span>
+          <img
+            id="themeToggleIcon"
+            class="w-4 object-contain"
+            src="assets/icon/lightMode.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <span id="themeToggleLabel" class="sr-only">Ativar modo claro</span>
         </button>
       </div>
 
       <header class="mt-4 flex items-center justify-center">
         <div class="flex flex-col items-center gap-4">
           <div
-            class="h-32 w-32 overflow-hidden rounded-full ring-2 ring-zinc-200 dark:ring-zinc-800"
+            class="profile-image-frame relative h-32 w-32 overflow-hidden rounded-full ring-2 ring-zinc-200 dark:ring-zinc-800"
           >
             <img
               id="profileImage"
@@ -73,7 +79,7 @@
         >
           Linkedin
         </a>
-        
+
         <a
           href="https://open.spotify.com/user/tydartz"
           target="_blank"

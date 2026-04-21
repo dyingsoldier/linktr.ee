@@ -5,6 +5,30 @@
   --default-font-family: Fira Code;
 }
 
+.profile-image-frame::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center, rgb(255 255 255 / 0.22), transparent 42%),
+    rgb(24 24 27 / 0.18);
+  transition: opacity 160ms ease;
+}
+
+.profile-image-frame.is-loading::after {
+  opacity: 1;
+}
+
+.profile-image-frame img {
+  transition: opacity 160ms ease;
+}
+
+.profile-image-frame.is-loading img {
+  opacity: 0.72;
+}
+
 @media (min-width: 1024px) {
   .desktop-zoom {
     transform: scale(1.08);
